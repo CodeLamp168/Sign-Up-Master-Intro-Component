@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/*Body*/
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size:16px;
+    font-family:'Poppins';
+    background-color:rgb(247, 122, 143);
+    background-image:url(./images/bg-intro-mobile.png);
+    color:white;
+}
+/*-------------*/
+
+
+/*Text container*/
+.text-container {
+    width:375px;
+}
+
+/*Promotional card*/
+.trial-promo {
+    background-color:hsl(248, 32%, 49%);
+    padding:25px 10px;
+    width:375px;
+    margin-bottom:1.5em;
+    border-radius:10px;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.144);
+}
+
+/*--------*/
+
+
+/*Form, Input & Button design*/
+form {
+    width:375px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius:10px;
+    background:white;
+    padding:2em;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.185);
+    
+}
+
+
+input {
+    width:300px;
+    height:55px;
+    padding-left:10px;
+    border-radius:5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    font-size:16px;
+    transition: 0.1s ease-in all;
+}
+
+input:focus {
+    outline:none;
+}
+
+input::placeholder {
+    font-size:14px;
+    font-weight:600;
+}
+
+small {
+    font-size:12px;
+}
+
+.claim-btn {
+    font-size:17px;
+    font-family:inherit;
+    font-weight:500;
+    text-transform: uppercase;
+    color:white;
+    background:hsl(154, 59%, 51%);
+    border:none;
+    padding:0.9em;
+    width:300px;
+    border-radius:5px;
+    box-shadow: 0px 5px 0px 0px hsl(154, 66%, 45%);
+    margin-bottom:1em;
+    cursor:pointer;
+    transition: 0.1s ease all;
+}
+
+.claim-btn:hover {
+    background-color:hsl(154, 74%, 67%);
+    box-shadow: 0px 5px 0px 0px hsl(154, 70%, 59%);
+}
+
+.terms-service a {
+    font-weight:700;
+    text-decoration:none;
+}
+
+/*--------*/
+
+
+
+
+/*Error symbol*/
+
+i {
+    color:red;
+    position:relative;
+    font-size:25px;
+    visibility: hidden;
+}
+
+i:before {
+    content:'';
+    position:absolute;
+    right:0.5em;
+    bottom:-0.3em;
+}
+
+/*Error class for javascript*/
+
+.error input {
+    border: red 1px solid;
+}
+
+.error small {
+    color:red;
+    font-style:italic;
+    font-weight:9px;
+}
+
+.error i {
+    visibility: visible;
+}
+
+/*----------*/
+
+/*Success Class for javascript*/
+
+.valid input {
+    border:hsl(154, 66%, 45%) 2px solid;
+}
+.valid small, i {
+    visibility:hidden;
+}
+
+.attribution { font-size: 13px; text-align: center;}
+.attribution a { color: hsl(228, 52%, 48%); font-weight:700; }
+
+
+@media (min-width:65em)
+{
+    /*Body response*/
+    body {
+        height:100vh;
+        flex-direction:row;
+        justify-content: space-around;
+        background-image:url(./images/bg-intro-desktop.png);
+    }
+
+     /*Expand width of elements for desktop*/
+    .text-container{
+        width:600px;
+        text-align:left;
+        font-size:23px;
+    }
+
+    .trial-promo {
+        width:550px;
+    }
+
+    form {
+        width:550px;
+    }
+
+    input {
+        width:490px;
+    }
+
+    .claim-btn {
+        width:490px;
+    }
+
+    /*-------------*/
+
+    /* Stop conflict with other elements*/
+
+    footer {
+        position:absolute;
+        bottom:0;
+        z-index: -1;
+    }
+
+    i:before {
+        bottom:-0.2em;
+        right:1em;
+    }
+
+
+
+}
+
